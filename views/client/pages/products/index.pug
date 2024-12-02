@@ -1,0 +1,20 @@
+extends ../../layouts/default.pug
+include ../../mixins/box-head.pug
+
+block main
+    .container.my3 
+        .row 
+            .col-12
+                +box-head("danh sách sản phẩm") 
+                  
+        .row 
+            .col-4.mb-3 
+                .product-item 
+                    .inner-image 
+                        img(src="https://i.ebayimg.com/images/g/nAAAAOSw3~JmQ-0z/s-l1600.webp", alt="apple watch")
+                        
+                    .inner-content
+                        h3.inner-title Apple Watch Series 5
+                        .inner-price-new $1000
+                        .inner-price-old $1500
+                        .inner-price-discount 50%
