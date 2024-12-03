@@ -3,10 +3,11 @@ const express = require("express");
 require("dotenv").config();
 
 //nhúng route giao diện
-const routes = require("./routes/client/index.route");
+const route = require("./routes/client/index.route");
+const routesAdmin = require("./routes/admin/index.route");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 // cấu hinhf pug vao dự án
 app.set("views", "./views");
 app.set("view engine", "pug");
@@ -22,7 +23,8 @@ app.get("/contact", (req, res) => {
 });
 
 //route
-routes(app);
+routesAdmin(app);
+route(app);
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
