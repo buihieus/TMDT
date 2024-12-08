@@ -1,0 +1,341 @@
+.page .header {
+    position: absolute;
+    width: 1171px;
+    height: 121px;
+    top: -6px;
+    left: 0;
+    background-color: transparent;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+.page .overlap-wrapper {
+    position: absolute;
+    width: 1171px;
+    height: 75px;
+    top: 0;
+    left: 0;
+  }
+.page .overlap {
+    position: relative;
+    height: 69px;
+    top: 6px;
+    background-color: #342f2f;
+  }
+.page .tm-kim {
+    position: absolute;
+    width: 386px;
+    height: 34px;
+    top: 17px;
+    left: 512px;
+  }
+.page .overlap-group {
+    position: relative;
+    width: 392px;
+    height: 42px;
+    left: -4px;
+    background-image: url(./img/rectangle-7.png);
+    background-size: 100% 100%;
+  }
+.page .text-wrapper {
+    position: absolute;
+    width: 279px;
+    top: 6px;
+    left: 45px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #817a7a;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .group {
+    position: absolute;
+    width: 360px;
+    height: 24px;
+    top: 6px;
+    left: 13px;
+  }
+.page .search {
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    top: 0;
+    left: 0;
+  }
+.page .notification-bing {
+    position: absolute;
+    width: 33px;
+    height: 24px;
+    top: 0;
+    left: 328px;
+  }
+.page .btn {
+    position: absolute;
+    width: 226px;
+    height: 34px;
+    top: 17px;
+    left: 925px;
+  }
+.page .ng-nhp {
+    width: 104px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 34px;
+  }
+.page .btn-ng-nhp {
+    width: 106px;
+    transform: rotate(0.04deg);
+    height: 34px;
+  }
+.page .div-wrapper {
+    position: relative;
+    width: 104px;
+    height: 34px;
+    background-color: #d9d9d9;
+    border-radius: 30px;
+  }
+.page .text-wrapper-2 {
+    position: absolute;
+    width: 96px;
+    top: 5px;
+    left: 8px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .ng-k {
+    width: 102px;
+    top: 1px;
+    left: 124px;
+    position: absolute;
+    height: 34px;
+  }
+.page .btn-ng-k {
+    width: 104px;
+    height: 34px;
+  }
+.page .overlap-group-2 {
+    position: relative;
+    width: 102px;
+    height: 34px;
+    background-color: #d9d9d9;
+    border-radius: 30px;
+  }
+.page .text-wrapper-3 {
+    position: absolute;
+    width: 72px;
+    top: 4px;
+    left: 20px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .thumb-apple-watch {
+    position: absolute;
+    width: 293px;
+    height: 63px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+.page .overlap-group-wrapper {
+    position: absolute;
+    width: 1175px;
+    height: 46px;
+    top: 75px;
+    left: 0;
+  }
+.page .overlap-2 {
+    position: relative;
+    width: 1171px;
+    height: 46px;
+    background: linear-gradient(
+      180deg,
+      rgb(13.45, 9.84, 9.84) 0%,
+      rgb(30.45, 22.37, 22.37) 100%
+    );
+  }
+.page .XH {
+    position: absolute;
+    width: 149px;
+    height: 16px;
+    top: 9px;
+    left: 82px;
+  }
+.page .text-wrapper-4 {
+    position: absolute;
+    width: 147px;
+    top: 0;
+    left: 0;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Tinos-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .frame {
+    position: absolute;
+    width: 89px;
+    height: 32px;
+    top: 7px;
+    left: 294px;
+  }
+.page .menu {
+    width: 91px;
+    height: 32px;
+  }
+.page .overlap-group-3 {
+    position: relative;
+    width: 89px;
+    height: 32px;
+  }
+.page .text-wrapper-5 {
+    position: absolute;
+    width: 54px;
+    top: 2px;
+    left: 0;
+    font-family: "Tinos-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .chevron-down {
+    position: absolute;
+    width: 53px;
+    height: 32px;
+    top: 0;
+    left: 36px;
+  }
+.page .nam-wrapper {
+    position: absolute;
+    width: 85px;
+    height: 32px;
+    top: 7px;
+    left: 432px;
+  }
+.page .nam {
+    width: 87px;
+    height: 32px;
+  }
+.page .overlap-group-4 {
+    position: relative;
+    width: 85px;
+    height: 32px;
+  }
+.page .text-wrapper-6 {
+    position: absolute;
+    width: 45px;
+    top: 2px;
+    left: 0;
+    font-family: "Tinos-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .img {
+    left: 32px;
+    position: absolute;
+    width: 53px;
+    height: 32px;
+    top: 0;
+  }
+.page .n-wrapper {
+    position: absolute;
+    width: 67px;
+    height: 32px;
+    top: 7px;
+    left: 568px;
+  }
+.page .n {
+    width: 69px;
+    height: 32px;
+  }
+.page .overlap-group-5 {
+    position: relative;
+    width: 67px;
+    height: 32px;
+  }
+.page .text-wrapper-7 {
+    position: absolute;
+    width: 28px;
+    top: 2px;
+    left: 0;
+    font-family: "Tinos-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .chevron-down-2 {
+    left: 14px;
+    position: absolute;
+    width: 53px;
+    height: 32px;
+    top: 0;
+  }
+.page .luxury {
+    position: absolute;
+    width: 68px;
+    height: 16px;
+    top: 9px;
+    left: 670px;
+  }
+.page .text-wrapper-8 {
+    position: absolute;
+    width: 66px;
+    top: 0;
+    left: 0;
+    font-family: "Tinos-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .text-wrapper-9 {
+    position: absolute;
+    width: 108px;
+    top: 9px;
+    left: 818px;
+    font-family: "Tinos-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+.page .text-wrapper-10 {
+    position: absolute;
+    width: 105px;
+    top: 10px;
+    left: 1007px;
+    font-family: "Tinos-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
