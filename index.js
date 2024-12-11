@@ -1,75 +1,47 @@
-const express = require("express");
-const path = require("path");
-const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/products_test");
+const express = require('express')
+const path = require('path');
+const methodOverride = require('method-override')
+const bodyParser = require('body-parser')
+const flash = require('express-flash')
+const cookieParser = require('cookie-parser')
+const session = require('express-session')
+require('dotenv').config()
 
-// const database = require("./config/database.js");
-//cai nay de sd env
-require("dotenv").config();
+const routes = require("./routes/client/index.route")
+const routesAdmin = require("./routes/admin/index.route")
 
-const systemConfig = require("./config/system");
+const app = express()
+const port = process.env.PORT; 
 
-//nhúng route giao diện
-const route = require("./routes/client/index.route");
-const routesAdmin = require("./routes/admin/index.route");
+app.use(methodOverride('_method'))
 
-const app = express();
-const port = process.env.PORT;
-// cấu hinhf pug vao dự án
-app.set("views", "./views");
-app.set("view engine", "pug");
+const database = require("./config/database");
+database.connect();
 
-// app locals variables biến toàn cục
+const configSystem = require("./config/system");
 
-app.locals.prefixAdmin = systemConfig.prefixAdmin;
+// parse application/x-www-form-urlencoded (Lấy dữ liệu từ req.body)
+app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use(express.static("public"));
+app.set('views', `${__dirname}/views`);
+app.set('view engine', 'pug');
 
-// Cấu hình thư mục tĩnh
-app.use('/css', express.static('public/css'));
-app.use(express.static(path.join(__dirname, 'public')));
+//Flash (Hiện thông báo)
+app.use(cookieParser('VANCHIKHANH'));
+app.use(session({ cookie: { maxAge: 60000 }}));
+app.use(flash());
 
-// Database
-// database.connect();
+app.use(express.static(`${__dirname}/public`))
 
-app.get("/blog", (req, res) => {
-  res.send("<h1>Trang danh sách bài viết</h1>");
-});
+//TinyMCE
+app.use('/tinymce', express.static(path.join(__dirname, 'node_modules', 'tinymce')));
+//App Locals variables (chỉ sử dụng biến toàn cục này trong file pug)
+app.locals.preFixAdmin = configSystem.prefixAdmin;
 
-app.get("/contact", (req, res) => {
-  res.send("<h1>Trang liên hệ</h1>");
-});
-
-//route
+//Routes
+routes(app);
 routesAdmin(app);
-route(app);
 
 app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
-});
-
-const Product = mongoose.model('Products', {
-  title: String,
-  description: String,
-  price: Number,
-  discountPercentage: Number,
-  stock: Number,
-  thumbnail: String,
-  status: String,
-  featured: String,
-  position: Number
-});
-
-// Đoạn mã truy vấn để lấy tất cả sản phẩm và in ra terminal
-app.get("/products", (req, res) => {
-  Product.find()
-    .then(products => {
-      console.log(products);  // In dữ liệu lên terminal
-      res.render("products", {
-        products: products,  // Truyền sản phẩm vào view
-      });
-    })
-    .catch(err => {
-      console.log("Error retrieving products:", err);
-    });
-});
+  console.log(`Example app listening on port ${port}`)
+})
