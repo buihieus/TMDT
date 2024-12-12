@@ -1,19 +1,21 @@
-extends ../../layouts/default.pug
+extends ../../layouts/default.pug 
 include ../../mixins/box-head.pug
-
-block main
-    .container.my3 
-        .row 
+block main 
+    .container.my-3
+        .row
             .col-12
-                +box-head("danh sách sản phẩm")          
-        .row 
-            .col-4.mb-3 
-                .product-item 
-                    .inner-image 
-                        img(src="https://i.ebayimg.com/images/g/nAAAAOSw3~JmQ-0z/s-l1600.webp", alt="apple watch")
-                        
-                    .inner-content
-                        h3.inner-title Apple Watch Series 5
-                        .inner-price-new $1000
-                        .inner-price-old $1500
-                        .inner-price-discount 50%
+                +box-head("Danh sách sản phẩm")
+
+        .row
+            each item in products
+                .col-4.mb-3
+                    .product-item
+                        .inner-image
+                            img(src=item.thumbnail, 
+                            alt=item.tilte)
+                        .inner-content
+                            h3.inner-title 
+                                a(href=`/products/${item.slug}`) #{item.title}
+                            .inner-price-new #{Math.ceil((item.price*(100 - item.discountPercentage))/100)}$
+                            .inner-price-old #{item.price}$
+                            .inner-discount -#{item.discountPercentage}%
